@@ -20,13 +20,7 @@ public class Factorial {
         System.out.println( num + "! is " + calculateFactorial(num));
     }
 
-    // 5! = 120
-
-    // 1 * 1 = 1
-    // 2 * 1 = 2
-    // 3 * 2 = 6
-    // 4 * 6 = 24
-    // 5 * 24 = 120
+    // 5! = 5 * 4 * 3 * 2 * 1 = 120
 
     public static int calculateFactorial(int num){
         int result = 1;
