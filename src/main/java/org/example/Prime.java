@@ -9,7 +9,6 @@ A prime number is a number that cannot be evenly divided by any other number exc
 - 5 (only divisible by 1 and 5)
 */
 
-
 public class Prime {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -23,15 +22,13 @@ public class Prime {
             System.out.println(num + " is a prime number.");
         else
             System.out.println(num + " is not a prime number.");
-
     }
 
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false;
         }
-
-        for (int i = 2; i <= num/2; i++) {
+        for(int i = 2; i <= num/2; i++) {
             if (num % i == 0) {
                 return false;
             }

@@ -2,25 +2,18 @@ package question4;
 
 public class RepsEqual {
 
-    public static void main(String[] args){
-        int a[] = {0, 0 , 3, 2, 0, 5, 3};
-        System.out.println(repsEqual(a, 32053));
+    public static void main(String[] args) {
+        int a[] = {3, 2, 0, 5, 3};
+        int n = 32053;
+        System.out.println(repsEqual(a, a.length, n));
     }
 
-    public static int repsEqual(int[ ] a, int n) {
-        int index = 0;
-        double result = 0;
-
-        // skip the leading zero
-        while (a[index] == 0) {
-            index++;
+    public static int repsEqual(int a[], int len, int n) {
+        int num = 0;
+        for (int i = 0; i < len; i++) {
+            num = (num * 10) + a[i];
+            System.out.println("num" + num);
         }
-
-        // result = result + contentsOfArray * 10 ^ arraySize - 1 - startingPosition/currentIndex
-        for(; index < a.length; index++) {
-            result = result + a[index] * Math.pow(10, a.length - 1 - index);
-        }
-        if (result == n) return 1;
-        else return 0;
+        return num == n ? 1 : 0;
     }
 }
