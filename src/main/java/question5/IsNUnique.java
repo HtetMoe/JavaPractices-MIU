@@ -11,9 +11,9 @@ public class IsNUnique {
         if (a.length < 2) return 0;
 
         int count = 0;
-        for (int i = 0; i < a.length - 1; i++) {
+        for (int i = 0; i < a.length; i++) {
             //System.out.println("i " + i);
-            if (a[i] > n) continue;
+            if (a[i] > n) continue; // ***
 
             for (int j = i + 1; j < a.length; j++) {
                 //System.out.println("j " + j);

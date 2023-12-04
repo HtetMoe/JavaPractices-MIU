@@ -7,7 +7,7 @@ public class FindOccurrences {
         System.out.println("occurrences of " + n + " : " + findOccurrences(a, n));
     }
 
-    public static int findOccurrences(int[] a, int n){
+    public static int findOccurrences(int[] a, int n) {
         int count = 0;
         for (int element : a) {
             if (element == n) {

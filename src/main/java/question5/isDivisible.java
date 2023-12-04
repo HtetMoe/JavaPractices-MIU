@@ -7,8 +7,8 @@ public class isDivisible {
     }
 
     public static int isDivisible(int a[], int divisor) {
-        for (int value : a)
-            if (value % divisor != 0) return 0;
+        for (int element : a)
+            if (element % divisor != 0) return 0;
         return 1;
     }
 }

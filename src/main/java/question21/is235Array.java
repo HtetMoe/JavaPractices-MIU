@@ -12,8 +12,6 @@ public class is235Array {
      */
     public static void main(String[] args) {
         int[] a = {2, 3, 5, 7, 11};
-        int[] a1 = {2, 3, 6, 7, 11};
-        int[] a2 = {2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println("result : " + is235Array(a, a.length));
     }
 

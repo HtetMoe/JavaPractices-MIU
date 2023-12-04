@@ -10,12 +10,7 @@ public class OddHeavy {
      */
     public static void main(String[] args) {
         int[] a = {-2, -4, -6, -8, -0, 11};
-        int[] a1 = {1};
-        int[] a2 = {2};
-        int[] a3 = {1, 1, 1, 1, 1, 1};
-        int[] a4 = {2, 4, 6, 8, 11};
-        int[] a5 = {-2, -4, -6, -8, -0, 11};
-        System.out.println("is Odd Heavy : " + isOddHeavy(a5));
+        System.out.println("is Odd Heavy : " + isOddHeavy(a));
     }
 
     public static int isOddHeavy(int[] a) {

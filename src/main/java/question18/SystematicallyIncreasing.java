@@ -8,7 +8,7 @@ public class SystematicallyIncreasing {
 
     public static int isSystematicallyIncreasing(int[] a) {
         int index = 0;
-        int part = 1;
+        int part  = 1;
         while (index < a.length) {
             for (int i = 1; i <= part; i++) {
                 //System.out.println("i : " + i);

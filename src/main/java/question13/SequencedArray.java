@@ -7,9 +7,9 @@ public class SequencedArray {
     - contain only those integers.
      */
     public static void main(String[] args) {
-        int[] a = {-5, -5, -4, -4, -4, -3, -3, -2, -2, -2};
-        int m = -5;
-        int n = -2;
+        int[] a = {1, 2, 3, 4, 5};
+        int m = 1;
+        int n = 5;
         System.out.println(isSequencedArray(a, m, n));
     }
 
@@ -30,8 +30,9 @@ public class SequencedArray {
         //contain only those integers m to n(inclusive)
         for (int i = m; i <= n; i++) { // m to n => 2,3,4,5,6
             boolean found = false;
-            for (int num : a) {
-                if (num == i) {
+            for (int element : a) {
+                if (element == i) {
+                    //System.out.println("element : " + element);
                     found = true;
                     break;
                 }

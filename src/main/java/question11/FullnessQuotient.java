@@ -18,7 +18,7 @@ public class FullnessQuotient {
         int count = 0;
         //representations of n in bases 2 through 9.
         for(int base = 2; base <= 9; base++) {
-            int dividend = n;
+            int dividend = n; //don't forget to update this
             boolean hasRemainderZero = false;
 
             //find modulo until dividend is 0

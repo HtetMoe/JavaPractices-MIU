@@ -3,7 +3,7 @@ package question2;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class IsGuthrieSequence1 {
+public class FindGuthrieSequence {
     public static void main(String[] args) {
         int[] a = {8, 4, 2, 1};
         System.out.println("result : " + isGuthrieSequence(a));

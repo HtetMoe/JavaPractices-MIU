@@ -17,10 +17,9 @@ public class FindSmallest {
                     break;
                 }
             }
-            if (hasDigit2) {
-                return number;
-            }
-            number++;
+            if (hasDigit2)  return number;
+
+            number++; //update
         }//end while
     }
 

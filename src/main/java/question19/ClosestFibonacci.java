@@ -2,7 +2,7 @@ package question19;
 
 public class ClosestFibonacci {
     public static void main(String[] args) {
-        int n = 13;
+        int n = 34;
         System.out.println("result : " + closestFibonacci(n));
     }
 

@@ -34,7 +34,7 @@ public class ZeroPlentiful {
                 count++;
             }
             else {
-                if(count >= 4) seq +=1;
+                if(count >= 4) seq ++;
                 count = 0; // update for next seq
             }
         }

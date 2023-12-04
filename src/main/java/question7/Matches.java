@@ -11,25 +11,27 @@ public class Matches {
         - for n in P, if n is positive then the sequence of n elements of A must all be positive
      */
 
-    public static int matches(int a[], int len, int p[]) {
-
-        //check the size first,
-        int size = 0;
-        for (int value : p) {
-            size += Math.abs(value);
+    public static int matches(int[] a, int len, int[] p){
+        //check the length first
+        int pLen = 0;
+        for(int element : p){
+            pLen += Math.abs(element);
         }
-        if (size != len) return 0;
+        if(pLen != len) return 0;
 
-        //p
-        for (int i = 0; i < p.length; i++) {
-            int aLength = p[i];
-            int pSign = p[i] < 0 ? -1 : 1;
+        int index = 0;
+        for(int element : p){
+            int size = Math.abs(element);
+            int pSign = element > 0 ? 1 : -1;
 
-            //a
-            for (int j = 0; j < aLength; j++) {
-                int aSign = a[j] < 0 ? -1 : 1; // check the sign
-                if (aSign != pSign) return 0;
+            for(int i = 0; i < size; i ++){
+                //System.out.println("index : " + index);
+                int aSign = a[index] > 0 ? 1 : -1;
+                if(pSign != aSign) return 0;
+
+                index++; //update index
             }
+            //System.out.println("---");
         }
         return 1;
     }

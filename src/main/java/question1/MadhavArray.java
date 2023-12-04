@@ -5,8 +5,8 @@ package question1;
     -> a[0] = a[1] + a[2] = a[3] + a[4] + a[5] = a[6] + a[7] + a[8] + a[9] =
 
     -> The length of a Madhav array must be n*(n+1)/2 for some n.
-        arr.length = n*(n+1)/2
-        arr.length * 2 = n*(n+1)
+        len = n * (n+1)/2
+        len * 2 = n * (n+1)
  */
 
 public class MadhavArray {
@@ -28,30 +28,33 @@ public class MadhavArray {
             n++; //update
         }
 
-        //System.out.println("isCorrectLength : " + isCorrectLength);
         if (!isCorrectLength) return 0;
-        
+        System.out.println("is correct length.");
+
+
         // logic -> a[0] = a[1] + a[2] = a[3] + a[4] + a[5] = a[6] + a[7] + a[8] + a[9] =
         // array -> {2, 1, 1, 4, -1, -1}
 
         //Check for Madhav array
-        int startIndex = 1;
+        int index = 1;
         n = 2; // Reset n for array traversal
 
         //find summation of each part
-        while (startIndex < a.length) {
+        while (index < a.length) {
             //System.out.println("n : " + n); // sum of 2,3,4,5.... numbers
             //System.out.println("start index : " + startIndex); // 1,3,6,10...
 
             int sum = 0;
             // Calculate the sum for the current group
-            for (int i = startIndex; i < startIndex + n; i++) {
+            for (int i = index; i < index + n; i++) {
                 sum += a[i];
             }
+
+            System.out.println("sum = " + sum);
             if (sum != a[0]) return 0;
 
             //reset value
-            startIndex += n; // 1+2, 3+3 , 6+3 // for every startIndex
+            index += n; // 1+2, 3+3 , 6+3 // for every startIndex
             n++; // number of value to sum
         }
         return 1;

@@ -3,7 +3,7 @@ package question16;
 public class DigitIncreasing {
     public static void main(String[] args) {
         int n = 7404;
-        System.out.println(isDigitIncreasing(n));
+        System.out.println("result : "  + isDigitIncreasing(n));
     }
 
     /*
@@ -12,19 +12,17 @@ public class DigitIncreasing {
      */
 
     public static int isDigitIncreasing(int n) {
-        //for some digit n between 1 and 9
-        for (int i = 1; i < 9; i++) {
-
-            int digit = 0;
+        int ori = n;
+        for (int i = 1; i <= 9; i++) {
             int sum = 0;
-
+            int digit = 0;
             while (sum < n) {
-                digit = i + (digit * 10);
-                //System.out.println(digit);
+                digit = (digit * 10) + i;
+                //System.out.println("digit : " + digit);
+                sum += digit;
             }
-            sum += digit;
 
-            if (sum == n) return 1;
+            if (sum == ori)  return 1;
         }
         return 0;
     }

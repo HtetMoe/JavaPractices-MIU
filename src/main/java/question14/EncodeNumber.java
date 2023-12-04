@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class EncodeNumber {
     public static void main(String[] args) {
-        int n = 1;
+        int n = 6936;
         System.out.println("result : " + Arrays.toString(encodeNumber(n)));
     }
 
@@ -14,7 +14,6 @@ public class EncodeNumber {
 
         ArrayList<Integer> primeFactors = new ArrayList<>();
         int[] result;
-
 
         //find factors
         for (int i = 2; i <= n / 2; i++) {
@@ -25,6 +24,7 @@ public class EncodeNumber {
                 n /= i;
             }
         }
+        System.out.println("prime factors : " + primeFactors);
 
         //array to list
         result = new int[primeFactors.size()];

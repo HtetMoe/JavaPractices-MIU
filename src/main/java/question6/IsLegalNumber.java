@@ -2,8 +2,8 @@ package question6;
 
 public class IsLegalNumber {
     public static void main(String[] args){
-        int a[] = {3, 2, 1};
-        System.out.println(isLegalNumber(a, 3));
+        int a[] = {3, 7, 1};
+        System.out.println(isLegalNumber(a, 6));
     }
 
     public static int isLegalNumber(int a[], int base) {

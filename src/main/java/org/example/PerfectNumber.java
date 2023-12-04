@@ -1,17 +1,19 @@
 package org.example;
 
 public class PerfectNumber {
+    /*
+        - the sum of its factors, excluding itself
+     */
     public static void main(String[] args) {
         System.out.println("Perfect Number : " + findPerfectNumber(1));
         //System.out.println("sum factor : " + findSumFactors(5));
     }
 
     public static int findPerfectNumber(int n){
-        int num = n;
-        while (num != findSumFactors(num)){
-            num++;
+        while (n != findSumFactors(n)){
+            n++;
         }
-        return num;
+        return n;
     }
 
     public static int findSumFactors(int n){

@@ -8,11 +8,11 @@ public class IsCentred15 {
 
     //This is teacher's answer
     public static int isCentered15(int[ ] a) {
-        for (int out = 0; out <= a.length / 2; out++) {
+        for (int i = 0; i <= a.length / 2; i++) { //outer loop
             int sum = 0;
-            for (int inner = out; inner < a.length - out; inner++) {
-                System.out.println(inner);
-                sum += a[inner];
+            for (int j = i; j < a.length - i; j++) {// inner loop
+                System.out.println(j);
+                sum += a[j];
             }
             System.out.println("---");
             if (sum == 15) return 1;

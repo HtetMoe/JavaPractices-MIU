@@ -8,14 +8,13 @@ public class StantonMeasure {
 
     public static int stantonMeasure(int[] a) {
         int result = 0;
+        int count  = 0;
 
-        int count1 = 0;
         for (int e : a) {
-            if (e == 1) count1++;
+            if (e == 1) count++;
         }
-
         for (int e : a) {
-            if (e == count1) result++; // get stanton measure
+            if (e == count) result++; // get stanton measure
         }
         return result;
     }

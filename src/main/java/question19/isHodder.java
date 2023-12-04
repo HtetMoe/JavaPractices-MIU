@@ -24,11 +24,11 @@ public class isHodder {
         //System.out.println("count " + count);
 
         //calculate power of 2
-        int result = 1;
+        int powerOf2 = 1;
         for(int i = 1; i <= power; i++){
-            result *= 2;
+            powerOf2 *= 2;
         }
-        System.out.println("result : " + result);
-        return result - 1 == ori ? 1 : 0;
+        System.out.println("result : " + powerOf2);
+        return powerOf2 - 1 == ori ? 1 : 0;
     }
 }

@@ -13,7 +13,7 @@ public class EncodeArray {
      */
 
     public static void main(String[] args) {
-        //{0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1} -> 12345
+        //{0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1} -> 1234
         int n = 12;
         System.out.println("result : " + Arrays.toString(encodeArray(n)));
     }
@@ -34,7 +34,7 @@ public class EncodeArray {
         }
         System.out.println("length : " + len);
 
-        absN = Math.abs(n);
+        absN = Math.abs(n); // reset
         encodedArray = new int[len];
         int index = 0;
 

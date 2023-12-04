@@ -7,10 +7,10 @@ public class IsSquare {
     }
 
     public static int isSquare(int n) {
-        int i = 1;
-        while (i * i <= n)	{
-            if (i * i == n)	return 1;
-            i++	;
+        int num = 1;
+        while (num * num <= n)	{
+            if (num * num == n)	return 1;
+            num++;
         }
         return 0;
     }

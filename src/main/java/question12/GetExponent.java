@@ -6,20 +6,19 @@ public class GetExponent {
        -  162 = (2 power 1) * (3 power 4) -> result : p is 3, x is 4
      */
     public static void main(String[] args) {
-        int n = 124;
-        int p = 4;
+        int n = 162;
+        int p = 3;
         System.out.println("result : " + getExponent(n, p));
     }
 
     public static int getExponent(int n, int p) {
-        int count = 0;
-
+        int x = 0;
         if (p <= 1) return -1;
 
         while (n % p == 0) {
-            count++;
+            x++;
             n /= p; // update n
         }
-        return count;
+        return x;
     }
 }

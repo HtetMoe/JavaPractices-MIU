@@ -11,6 +11,7 @@ public class Trivalent {
 
     public static int isTrivalent(int[] a) {
         if (a.length < 3) return 0;
+
         Set<Integer> set = new HashSet<>();
         for (int e : a) {
             set.add(e);

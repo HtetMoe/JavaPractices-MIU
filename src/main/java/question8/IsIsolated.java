@@ -17,8 +17,8 @@ public class IsIsolated {
 
         String sqString = String.valueOf(square);
         while (cube != 0) {
-            long lastDigit = cube % 10;
-            if (sqString.contains(String.valueOf(lastDigit))) { // get rightmost bit
+            long digit = cube % 10;
+            if (sqString.contains(String.valueOf(digit))) { // get rightmost bit
                 return 0;
             }
             cube = cube / 10; //433074  // right shift

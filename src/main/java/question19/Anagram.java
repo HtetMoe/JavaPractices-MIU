@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args) {
-        char[] a1 = {'b', 'o', 'g'};//{'s', 'i', 't' };
+        char[] a1 = {'o', 'o', 'b'};//{'s', 'i', 't' };
         char[] a2 = {'b', 'o', 'o'}; //{'i', 't', 's' };
         System.out.println("result : " + areAnagrams(a1, a2, a2.length));
     }

@@ -21,8 +21,8 @@ public class isOneBalanced {
 
         int nonOnesCount = 0; //middles
 
-        for (int num : a) {
-            if (num == 1) {
+        for (int element : a) {
+            if (element == 1) {
                 if (nonOnesCount == 0) {
                     onesAtStart++;
                 } else {

@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class isFibonacci {
     public static void main(String[] args) {
-        int n = 13;
+        int n = 27;
         System.out.println("result : " + isFibonacci(n));
     }
 

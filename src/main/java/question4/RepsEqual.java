@@ -1,7 +1,6 @@
 package question4;
 
 public class RepsEqual {
-
     public static void main(String[] args) {
         int a[] = {3, 2, 0, 5, 3};
         int n = 32053;

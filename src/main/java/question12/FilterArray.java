@@ -11,26 +11,25 @@ public class FilterArray {
     }
 
     public static int[] filterArray(int[] a, int n) {
-        ArrayList<Integer> result = new ArrayList<>();
+        ArrayList<Integer> indexes = new ArrayList<>();
         int[] resultList;
         int count = 0; // index
 
         //convert n to binary
         while (n != 0) {
-            if (n % 2 == 1) {
-                result.add(count);
-            }
+            if (n % 2 == 1) indexes.add(count);
+
             count++;
             n /= 2; // update n
         }
-        System.out.println("index of 1 in Binary array : " + result);
+        System.out.println("index of 1 in Binary array : " + indexes);
 
         if (count > a.length) {
             return null;
         } else {
-            resultList = new int[result.size()];
-            for (int i = 0; i < result.size(); i++) {
-                resultList[i] = a[result.get(i)];
+            resultList = new int[indexes.size()];
+            for (int i = 0; i < indexes.size(); i++) {
+                resultList[i] = a[indexes.get(i)];
             }
         }
         return resultList;

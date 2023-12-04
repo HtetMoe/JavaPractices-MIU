@@ -20,24 +20,24 @@ reverseNumber =  (reverseNum * 10 ) + remainder
 
 public class Reverse {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter a number : ");
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Please enter a number : ");
+//
+//        String userInput = scanner.next();
+//        int num = Integer.parseInt(userInput);
 
-        String userInput = scanner.next();
-        int num = Integer.parseInt(userInput);
-
+        int num = 12345;
         //reverse number
         System.out.println("Your reverse number is " + processReverse(num));
     }
 
     public static int processReverse(int num) {
-        int remainder = 0;
         int reverseNum = 0;
 
         // num = 12345
         while (num > 0) {
-            remainder = num % 10; // get last digit, remainder value  -> 5, 4
-            reverseNum = remainder + (reverseNum * 10) ; // promote position -> 5, 40 + 5 = 45
+            int digit = num % 10; // get last digit, remainder value  -> 5, 4
+            reverseNum = digit + (reverseNum * 10) ; // promote position -> 5, 40 + 5 = 45
             num = num / 10; // demote position, quotient value -> 1234, 123
         }
         return reverseNum;

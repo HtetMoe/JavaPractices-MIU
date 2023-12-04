@@ -3,13 +3,13 @@ package question7;
 public class SumSafe {
     public static void main(String[] args) {
         int a[] = {5, -4, 2};
-        System.out.println(sumSafe(a));
+        System.out.println("result : " + sumSafe(a));
     }
 
     public static int sumSafe(int a[]) {
         int sum = 0;
         for (int e : a) {
-            sum = sum + e;
+            sum += e;
         }
 
         for (int e : a) {

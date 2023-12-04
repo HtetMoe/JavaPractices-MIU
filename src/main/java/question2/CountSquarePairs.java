@@ -14,24 +14,22 @@ public class CountSquarePairs {
     public static int countSquarePairs(int[] a) {
         int count = 0;
 
+        //remove duplicate
         Set<Integer> set = new HashSet<>();
         for(int element : a) {
             set.add(element);
         }
 
-        //remove duplicate
         ArrayList<Integer> uniqueList = new ArrayList<>(set);
-        System.out.println("after removed duplicates : " + uniqueList);
-
         Collections.sort(uniqueList);
-        System.out.println("sorted arr : " + uniqueList);
+        System.out.println("unique and sorted : " + uniqueList);
 
         //outer loop
         for (int i = 0; i < uniqueList.size() - 1; i++) {
             int x = uniqueList.get(i);
 
-            //because both members of a square pair have to be greater than 0
-            if ( x < 1 ) continue;
+            //x and y are positive, non-zero integers
+            if ( x < 1 ) continue; // ***
 
             //inner loop
             for (int j = i + 1; j < uniqueList.size(); j++) {
@@ -48,10 +46,8 @@ public class CountSquarePairs {
         if (n < 0) return 0;
         int num = 1;
         while (num * num <= n) {
-            if (num * num == n) {
-                return 1;
-            }
-            num++;
+            if (num * num == n)  return 1;
+            num++; //update
         }
         return 0;
     }

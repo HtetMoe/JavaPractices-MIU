@@ -14,7 +14,7 @@ public class DecodeArray {
         if (len <= 1) return 0;
 
         int result = 0;
-        int sign = 1;
+        int sign   = 1;
 
         int count = 0;
         for (int i = 0; i < len; i++) {
@@ -22,7 +22,7 @@ public class DecodeArray {
                 count++;
             } else {
                 result = (result * 10) + count;
-                count = 0; //clear
+                count = 0; //update
             }
         }
         if (a[0] < 0) sign = -1;

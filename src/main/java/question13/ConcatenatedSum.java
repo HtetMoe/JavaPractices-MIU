@@ -23,5 +23,4 @@ public class ConcatenatedSum {
         }
         return sum == ori ? 1 : 0;
     }
-
 }

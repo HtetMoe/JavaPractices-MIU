@@ -5,21 +5,16 @@ public class isVanilla {
         int a[] = {-9999, 999, 99999, 9};
         System.out.println("result : " + isVanilla(a));
     }
+    public static int isVanilla(int[] a) {
+        if(a.length < 1) return 1;
 
-    public static int isVanilla(int a[]) { //-9999
-        if (a.length == 0) return 1;
-
-        //find digit first
-        int digitValue = a[0] % 10;
-        digitValue = digitValue < 0 ? (0 - digitValue) : digitValue;
-        //System.out.println(digit);
-
-        for (int element : a) {
-            element = element < 0 ? 0 - element : element; // change positive number
-            while (element != 0) {
-                int digit = element % 10;
-                if (digit != digitValue) return 0;
-                element = element / 10; //update
+        int num =  Math.abs(a[0]) % 10;
+        for(int element : a){
+            int value = Math.abs(element);
+            while (value != 0){
+                int digit = value % 10;
+                if(digit != num) return 0;
+                value /= 10; //update
             }
         }
         return 1;

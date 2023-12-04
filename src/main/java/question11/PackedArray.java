@@ -10,13 +10,10 @@ public class PackedArray {
     }
 
     public static int isPacked(int[] a) {
-        if (a.length == 0) {
-            return 1;
-        }
+        if (a.length == 0)  return 1;
 
         int current = a[0];
         int count = 1;
-
         for (int i = 1; i < a.length; i++) {
             //numbers are consecutive
             if (current == a[i]) {

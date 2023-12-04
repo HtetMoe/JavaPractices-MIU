@@ -17,6 +17,6 @@ public class areAdjacent {
             else if (value == n2) n2Index = i;
         }
         int diff = Math.abs(n1Index - n2Index);
-        return diff == 1 ? true : false;
+        return diff == 1;
     }
 }
